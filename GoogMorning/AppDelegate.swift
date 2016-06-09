@@ -26,6 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         $0.server = "https://parseapi.back4app.com"
       }
       
+      
       Parse.initializeWithConfiguration(configuration)
         // Color general de la app
         window?.tintColor = themeColor

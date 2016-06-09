@@ -28,7 +28,7 @@ class ParseFrases {
         cargarFrases()
     }
     
-    // Cargamos la tabla de frases
+    // Cargamos la tabla de frases.
     // De momento cargamos todas. Después habrá que parametrizar para cargar las de un día, o un año, etc
     func cargarFrases() {
         let query = PFQuery(className:"Frases");

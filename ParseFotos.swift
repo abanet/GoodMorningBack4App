@@ -27,11 +27,12 @@ class ParseFotos {
         cargarFotos()
     }
     
-    // Cargamos la tabla de fotos
+    // Cargamos la tabla de fotos.
     // De momento cargamos todas. Después habrá que parametrizar para cargar las de un día, o un año, etc
     func cargarFotos() {
        
-        let query = PFQuery(className:"GoodMorning");
+      // Clase Buenos días
+      let query = PFQuery(className:"GoodMorning");
         
         // día de la semana para obtener sólo las fotos correspondientes al día que es hoy
         if let numeroDia = getDayOfWeek() {
