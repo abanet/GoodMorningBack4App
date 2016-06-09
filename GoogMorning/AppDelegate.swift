@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 let themeColor = UIColor(red: 0.01, green: 0.41, blue: 0.22, alpha: 1.0)
 
 @UIApplicationMain
@@ -17,10 +18,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
-        Parse.setApplicationId("YxgHuxeJi1HyGluuqtYTLS06qJz9HtgxOA3NMkdE", clientKey: "iO2C4xOdfaQX3t2BvSfMW9dJMl7gpas8iTpZgpfz")
-        
+        //Parse.setApplicationId("YxgHuxeJi1HyGluuqtYTLS06qJz9HtgxOA3NMkdE", clientKey: "iO2C4xOdfaQX3t2BvSfMW9dJMl7gpas8iTpZgpfz")
+      
+      let configuration = ParseClientConfiguration {
+        $0.applicationId = "YxgHuxeJi1HyGluuqtYTLS06qJz9HtgxOA3NMkdE"
+        $0.clientKey = "iO2C4xOdfaQX3t2BvSfMW9dJMl7gpas8iTpZgpfz"
+        $0.server = "https://parseapi.back4app.com"
+      }
+      
+      Parse.initializeWithConfiguration(configuration)
         // Color general de la app
         window?.tintColor = themeColor
+        let navigationBarAppearace = UINavigationBar.appearance()
+        navigationBarAppearace.titleTextAttributes = [NSForegroundColorAttributeName: themeColor]
         // Override point for customization after application launch.
         return true
     }
